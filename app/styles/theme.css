@@ -1,0 +1,36 @@
+@define-mixin theme $theme, $backgroundColor, $textColor, $hoverColor, $activeColor, $textShadow {
+  .pallidium-layout-$(theme) {
+    background: $backgroundColor;
+    @mixin-content;
+
+    & h1,
+    & h2,
+    & h3,
+    & h4 {
+      color: $textColor;
+    }
+
+    & .page-heading {
+      color: $activeColor;
+    }
+
+    & .mdl-layout__header, & .mdl-layout__drawer-button {
+      color: $textColor;
+    }
+
+    & .pallidium-nav {
+      & .mdl-navigation__link {
+        color: $textColor;
+        text-shadow: $textShadow;
+
+        &:hover {
+          color: $hoverColor;
+        }
+
+        &.active {
+          color: $activeColor;
+        }
+      }
+    }
+  }
+}

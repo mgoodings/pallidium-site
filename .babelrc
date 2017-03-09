@@ -1,0 +1,13 @@
+{
+  "presets": ["es2015", "stage-1"],
+  "plugins": [
+    ["angularjs-annotate", {
+      "explicitOnly": true
+    }],
+    ["module-resolver", {
+      "alias": {
+        "app": "./app"
+      }
+    }]
+  ]
+}

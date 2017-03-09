@@ -1,0 +1,53 @@
+@import 'styles/base.css';
+@import 'styles/theme.css';
+@import 'styles/mdl-validations.css';
+
+.pallidium-nav-animation {
+  &.ng-enter {
+    animation: slideInLeft 0.4s;
+  }
+}
+
+.pallidium-header__logo {
+  position: absolute;
+  width: auto;
+  height: 56px;
+  padding: 14px 10px 0;
+  animation: slideInLeft 0.4s;
+}
+
+.pallidium-nav {
+  text-align: center;
+}
+
+.pallidium-nav__icon {
+  display: block;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 6px 0 8px;
+}
+
+.pallidium-nav__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+@mixin theme default, #fff, #111, #444, #572ed6 {}
+@mixin theme palette-1, #151a24, #999, #fff, #7e55ff, 0 2px 2px rgba(0,0,0,0.5) {}
+@mixin theme palette-2, #009bf4, #fff, #d2efff, #1c1c1c, 0 2px 2px rgba(0,0,0,0.2) {}
+@mixin theme palette-3, #000, #fff, #999, #572ed6, 0 2px 3px rgba(0,0,0,0.5) {}
+
+@mixin theme home, #4017A4, #CAC9CB, #fff, #5944cb, 0 2px 3px rgba(0,0,0,0.5) {
+  height: 100vh;
+  background-image: url(/img/hex-tile.png);
+  background-repeat: repeat;
+  background-size: 20%;
+
+  & .pallidium-header__logo {
+    display: none;
+  }
+}

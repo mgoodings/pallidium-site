@@ -1,0 +1,13 @@
+.contact-page {
+  height: calc(100vh - 100px);
+  text-align: center;
+}
+
+.contact-page__form {
+  max-width: 500px;
+  margin: auto;
+
+  & .mdl-textfield {
+    width: 100%;
+  }
+}
